@@ -15,9 +15,9 @@ const Navigation = () => {
     console.log(body);
 
     if (isOpen) {
-      body.style.overflow = "hidden";
-    } else {
       body.style.overflow = "auto";
+    } else {
+      body.style.overflow = "hidden";
     }
   };
 
