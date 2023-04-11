@@ -37,16 +37,18 @@ const Footer = () => {
         </article>
       </div>
       <div className={styles.btn_scroll_up}>
-        <button>
-          <span className={styles.initial}>
-            <span className={styles.b_animate}>
-              <AiOutlineArrowUp />
+        <a href="/">
+          <button>
+            <span className={styles.initial}>
+              <span className={styles.b_animate}>
+                <AiOutlineArrowUp />
+              </span>
+              <span className={styles.animated_arrow}>
+                <AiOutlineArrowUp />
+              </span>
             </span>
-            <span className={styles.animated_arrow}>
-              <AiOutlineArrowUp />
-            </span>
-          </span>
-        </button>
+          </button>
+        </a>
       </div>
     </section>
   );
