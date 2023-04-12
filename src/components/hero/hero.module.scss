@@ -1,14 +1,45 @@
 @import "../../styles/variable";
 
 .hero_wrapper {
+  display: grid;
+  // position: fixed;
+  // left: 0;
+  // padding-left: calc(100vw - 92%);
+  // z-index: -1;
+
+  grid-template-columns: 0.7fr 1.5fr;
   max-width: 1440px;
   width: 90%;
   margin: 0 auto;
-  height: 60vh;
-}
-.title {
-  color: $white;
-  font-size: 100px;
-  text-align: center;
-  text-transform: uppercase;
+  height: 50vh;
+  align-items: flex-end;
+
+  > .contact {
+    color: #ff4d00;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  &_desc {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 1rem;
+
+    .title {
+      color: $white;
+      font-size: 70px;
+      text-transform: capitalize;
+      font-weight: 400;
+      width: 100%;
+      max-width: 40vw;
+    }
+
+    > p {
+      color: $white;
+      font-size: 14px;
+      width: 100%;
+      max-width: 320px;
+    }
+  }
 }
