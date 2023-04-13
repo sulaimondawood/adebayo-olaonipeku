@@ -3,6 +3,7 @@ import styles from "../styles/default.module.scss";
 import Hero from "@/components/hero";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import About from "@/about";
 export default function Home() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Home() {
       <main className={styles.index_bg}>
         <Navigation />
         <Hero />
+        <About />
         <Footer />
       </main>
     </>
