@@ -4,6 +4,7 @@ import Hero from "@/components/hero";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import About from "@/about";
+import Projects from "@/components/projects";
 export default function Home() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function Home() {
         <Navigation />
         <Hero />
         <About />
+        <Projects />
         <Footer />
       </main>
     </>

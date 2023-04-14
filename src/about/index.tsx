@@ -4,7 +4,7 @@ import Experience from "@/experience";
 const About = () => {
   return (
     <section className={styles.section_wrp}>
-      <div className={styles.exp_wrp_title}>
+      <div className={styles.abt_abt_title}>
         <span>About</span>
         <span>-</span>
         <span>About</span>
