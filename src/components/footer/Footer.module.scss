@@ -7,10 +7,7 @@
   display: flex;
   padding: 2rem 0;
   justify-content: center;
-
-  // for the position: fied;
-  // padding-top: calc(50vh + 50px);
-  // z-index: 99;
+  font-family: $font-grotesk;
 
   &_right {
     display: flex;

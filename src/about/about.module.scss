@@ -8,8 +8,8 @@
   color: $gray;
 
   .abt_abt_title {
-    border-top: 1px solid $gray;
-    border-bottom: 1px solid $gray;
+    border-top: $border-text;
+    border-bottom: $border-text;
     padding: 30px 0;
     text-transform: uppercase;
     position: relative;
@@ -27,14 +27,12 @@
     }
   }
   .row {
-    //   color: $white;
-    // color: #f5f5f5;
+    font-family: $font-unica-xl;
     text-transform: uppercase;
 
     &_text {
       > span {
         font-size: 180px;
-        font-weight: 300;
         line-height: 0.85;
       }
     }
@@ -53,6 +51,7 @@
   .about_info {
     margin-top: 100px;
     color: $gray;
+    font-family: $font-unica-xl;
 
     .about_info_info {
       max-width: 40rem;
@@ -76,6 +75,7 @@
       .first_sent {
         text-transform: uppercase;
         color: $gray-3;
+        font-family: $font-unica-light;
       }
 
       .actual_sent {

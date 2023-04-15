@@ -2,11 +2,6 @@
 
 .hero_wrapper {
   display: grid;
-  // position: fixed;
-  // left: 0;
-  // padding-left: calc(100vw - 92%);
-  // z-index: -1;
-
   grid-template-columns: 0.7fr 1.5fr;
   max-width: 1440px;
   width: 90%;

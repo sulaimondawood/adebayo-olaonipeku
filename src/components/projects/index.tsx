@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./projects.module.scss";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { FiArrowUpRight } from "react-icons/fi";
 const Projects = () => {
   return (
     <section className={styles.section_wrp}>
@@ -21,7 +21,7 @@ const Projects = () => {
             <div className={styles.year_count}>
               <h4>2022</h4>
               <span>
-                <AiOutlineArrowRight />
+                <FiArrowUpRight />
               </span>
             </div>
           </article>
@@ -32,7 +32,7 @@ const Projects = () => {
             <div className={styles.year_count}>
               <h4>2022</h4>
               <span>
-                <AiOutlineArrowRight />
+                <FiArrowUpRight />
               </span>
             </div>
           </article>
@@ -43,7 +43,7 @@ const Projects = () => {
             <div className={styles.year_count}>
               <h4>2022</h4>
               <span>
-                <AiOutlineArrowRight />
+                <FiArrowUpRight />
               </span>
             </div>
           </article>

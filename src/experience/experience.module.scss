@@ -4,8 +4,8 @@
   padding-top: 100px;
 
   .exp_wrp_title {
-    border-top: 1px solid $gray;
-    border-bottom: 1px solid $gray;
+    border-top: $border-text;
+    border-bottom: $border-text;
     padding: 30px 0;
     text-transform: uppercase;
     position: relative;
@@ -25,11 +25,15 @@
     display: flex;
     gap: 50px;
     padding: 30px 0;
-    border-top: 0.8px solid $gray-3;
+    font-family: $font-manrope;
+    letter-spacing: 0.02em;
+    line-height: 25px;
+    border-top: $border;
 
     h4 {
-      text-transform: uppercase;
+      text-transform: capitalize;
       font-size: 1.25rem;
+      font-family: $font-clash-reg;
     }
 
     p {

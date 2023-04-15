@@ -23,13 +23,13 @@ const About = () => {
           <span>Software </span>
         </div>
         <div className={styles.row_text}>
-          <span>Software </span>
+          <span>Engineer </span>
         </div>
         <div className={styles.row_text}>
-          <span>Software </span>
+          <span>Frontend </span>
         </div>
         <div className={styles.row_text}>
-          <span>Software </span>
+          <span>Developer </span>
         </div>
       </div>
 

@@ -3,12 +3,11 @@
 .section_wrp {
   width: 90%;
   max-width: 1440px;
-  // margin-inline: auto;
   margin: 100px auto;
 
   .prj_prj_title {
-    border-top: 1px solid $gray;
-    border-bottom: 1px solid $gray;
+    border-top: $border-text;
+    border-bottom: $border-text;
     padding: 30px 0;
     text-transform: uppercase;
     position: relative;
@@ -28,13 +27,14 @@
   .project_cont {
     margin-top: 80px;
     color: $gray;
+    font-family: $font-unica-xl;
 
     a {
       > article {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 0.8px solid $gray-3;
+        border-bottom: $border;
         padding: 40px 10px;
 
         h4 {
