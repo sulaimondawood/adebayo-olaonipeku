@@ -37,7 +37,7 @@ const Footer = () => {
         </article>
       </div>
       <div className={styles.btn_scroll_up}>
-        <a href="/">
+        <a href="#">
           <button>
             <span className={styles.initial}>
               <span className={styles.b_animate}>
