@@ -1,5 +1,5 @@
 @import "../styles/variable";
-
+@import "../mixins/mobile";
 .experience_wrapper {
   padding-top: 100px;
 
@@ -11,9 +11,14 @@
     position: relative;
     display: flex;
     gap: 20px;
+    overflow: hidden;
 
     > span {
       font-size: 70px;
+
+      @include mobile {
+        font-size: 50px;
+      }
     }
 
     > span:nth-child(3) {
@@ -29,6 +34,10 @@
     letter-spacing: 0.02em;
     line-height: 25px;
     border-top: $border;
+
+    @include mobile {
+      flex-direction: column;
+    }
 
     h4 {
       text-transform: capitalize;

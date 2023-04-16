@@ -1,3 +1,5 @@
+@import "../../mixins/mobile";
+
 .cursor_ref {
   position: fixed;
   top: 15px;
@@ -8,6 +10,10 @@
   z-index: 9999;
   pointer-events: none;
   background-color: #fff;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .follower_ref {
@@ -21,4 +27,8 @@
   z-index: 9999;
   pointer-events: none;
   overflow: hidden;
+
+  @include mobile {
+    display: none;
+  }
 }

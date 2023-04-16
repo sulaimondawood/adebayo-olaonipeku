@@ -1,11 +1,16 @@
 @import "../styles/variable";
+@import "../mixins/mobile";
 
 .section_wrp {
   max-width: 1440px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   padding: 80px 0;
   color: $gray;
+
+  @include mobile {
+    padding: 0 2rem;
+  }
 
   .abt_abt_title {
     border-top: $border-text;
@@ -16,9 +21,14 @@
     display: flex;
     gap: 20px;
     margin-bottom: 60px;
+    overflow: hidden;
 
     > span {
       font-size: 70px;
+
+      @include mobile {
+        font-size: 50px;
+      }
     }
 
     > span:nth-child(3),
@@ -34,6 +44,10 @@
       > span {
         font-size: 180px;
         line-height: 0.85;
+
+        @include mobile {
+          font-size: 90px;
+        }
       }
     }
 

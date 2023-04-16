@@ -1,5 +1,5 @@
 @import "../../styles/variable";
-
+@import "../../mixins/mobile";
 .section_wrp {
   width: 90%;
   max-width: 1440px;
@@ -13,10 +13,15 @@
     position: relative;
     display: flex;
     gap: 20px;
+    overflow: hidden;
     color: $gray;
 
     > span {
       font-size: 70px;
+
+      @include mobile {
+        font-size: 50px;
+      }
     }
 
     > span:nth-child(3) {

@@ -1,0 +1,7 @@
+@import "../styles/variable";
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}

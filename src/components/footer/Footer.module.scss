@@ -1,4 +1,5 @@
 @import "../../styles/variable";
+@import "../../mixins/mobile";
 
 .footer_wrapper {
   max-width: 1440px;
@@ -9,15 +10,26 @@
   justify-content: center;
   font-family: $font-grotesk;
 
+  @include mobile {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   &_right {
     display: flex;
     flex: 1.2;
     flex-direction: column;
     gap: 3rem;
+
     &_desc {
       color: $white;
       font-size: 40px;
       font-weight: 400;
+
+      @include mobile {
+        max-width: 480px;
+        font-size: 30px;
+      }
     }
 
     .contact {
@@ -30,6 +42,10 @@
         text-transform: uppercase;
         font-size: 12px;
         color: $white;
+
+        @include mobile {
+          font-size: 8px;
+        }
       }
 
       button {
@@ -37,6 +53,10 @@
         border: none;
         color: $white;
         font-size: 20px;
+
+        @include mobile {
+          font-size: 18px;
+        }
       }
     }
 
@@ -46,10 +66,18 @@
       gap: 1rem;
       padding-top: 14rem;
 
+      @include mobile {
+        padding-top: 2rem;
+      }
+
       .title {
         text-transform: uppercase;
         font-size: 12px;
         color: $white;
+
+        @include mobile {
+          font-size: 8px;
+        }
       }
 
       ul {
@@ -63,6 +91,10 @@
           a {
             text-transform: uppercase;
             font-size: 20px;
+
+            @include mobile {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -73,6 +105,10 @@
     flex: 1;
     justify-self: flex-start;
     align-self: flex-end;
+
+    @include mobile {
+      align-self: flex-start;
+    }
 
     button {
       position: relative;
@@ -87,6 +123,8 @@
       font-size: 14rem;
       z-index: 1;
       color: #fdeee7;
+      width: 500px;
+      height: 500px;
 
       .initial {
         justify-content: center;
