@@ -5,3 +5,9 @@
     @content;
   }
 }
+
+@mixin tablet {
+  @media (min-width: $tablet) and (max-width: $lg) {
+    @content;
+  }
+}

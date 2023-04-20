@@ -4,9 +4,9 @@ const Experience = () => {
   return (
     <section className={styles.experience_wrapper}>
       <div className={styles.exp_wrp_title}>
-        <span>Work Experience</span>
+        <span>Experience</span>
         <span>-</span>
-        <span>Work Experience</span>
+        <span>Experience</span>
         <span>-</span>
       </div>
       <article className={styles.row}>

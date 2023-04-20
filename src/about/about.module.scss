@@ -86,6 +86,10 @@
       margin-top: 100px;
       margin-left: 10%;
 
+      @include mobile {
+        margin-left: 0;
+      }
+
       .first_sent {
         text-transform: uppercase;
         color: $gray-3;
@@ -96,6 +100,10 @@
         font-size: calc(1.75rem + 0.25vw);
         line-height: 1.5;
         font-weight: 300;
+
+        @include mobile {
+          font-size: calc(1.5rem + 0.15vw);
+        }
       }
     }
   }
