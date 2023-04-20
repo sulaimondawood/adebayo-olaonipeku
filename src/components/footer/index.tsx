@@ -43,9 +43,6 @@ const Footer = () => {
               <span className={styles.b_animate}>
                 <AiOutlineArrowUp />
               </span>
-              <span className={styles.animated_arrow}>
-                <AiOutlineArrowUp />
-              </span>
             </span>
           </button>
         </a>

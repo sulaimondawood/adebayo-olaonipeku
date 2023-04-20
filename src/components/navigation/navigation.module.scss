@@ -1,5 +1,5 @@
 @import "../../styles/variable";
-
+@import "../../mixins/mobile";
 .nav {
   display: flex;
   justify-content: space-between;
@@ -9,6 +9,7 @@
   width: 90%;
   margin: 0 auto;
   padding-bottom: 3rem;
+  font-family: $font-grotesk;
 
   .btn {
     background-color: transparent;
@@ -47,7 +48,6 @@
   justify-content: flex-start;
   gap: 90px;
   z-index: 99;
-  font-family: "DM Sans Medium";
 
   //   display: none;
 
@@ -60,6 +60,11 @@
     width: 90%;
     margin: 0 auto;
     padding-bottom: 3rem;
+
+    @include mobile {
+      padding-top: 3rem;
+      padding-bottom: 0px;
+    }
 
     .btn {
       background-color: transparent;
@@ -82,10 +87,10 @@
     gap: 30px;
     align-items: center;
     justify-content: center;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
+
+    @include mobile {
+      gap: 20px;
+    }
 
     .nav_link {
       color: $white;
@@ -93,6 +98,10 @@
       text-decoration: none;
       font-size: 100px;
       text-transform: uppercase;
+
+      @include mobile {
+        font-size: 60px;
+      }
     }
   }
 
@@ -111,12 +120,22 @@
       font-size: 20px;
       text-transform: uppercase;
       color: $white;
+
+      @include mobile {
+        display: none;
+      }
     }
     .external_Links {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 30px;
+
+      @include mobile {
+        width: 100%;
+        gap: 70px;
+        justify-content: center;
+      }
 
       .btn_link {
         text-decoration: none;
@@ -143,5 +162,4 @@
   justify-content: flex-start;
   gap: 90px;
   z-index: 99;
-  font-family: "DM Sans Medium";
 }

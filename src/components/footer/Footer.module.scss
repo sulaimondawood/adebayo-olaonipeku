@@ -96,6 +96,10 @@
             @include mobile {
               font-size: 18px;
             }
+
+            @media (max-width: 380px) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -137,19 +141,16 @@
         justify-content: center;
         overflow: hidden;
         transform: translateY(100%);
-        animation: infiniteArrow 1.2s infinite
+        animation: infiniteArrow 1.5s infinite
           cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
         .b_animate {
           justify-content: center;
-          padding: 3rem;
           border-radius: 50%;
-        }
 
-        .animated_arrow {
-          position: absolute;
-          bottom: 0;
-          padding: 3rem;
+          @include mobile {
+            font-size: 40vw;
+          }
         }
       }
     }

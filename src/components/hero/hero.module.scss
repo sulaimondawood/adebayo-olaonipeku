@@ -8,6 +8,7 @@
   margin: 0 auto;
   height: 50vh;
   align-items: flex-end;
+  font-family: $font-grotesk;
 
   @include mobile {
     padding: 0 2rem;
