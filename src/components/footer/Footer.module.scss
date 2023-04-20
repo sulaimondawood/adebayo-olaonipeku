@@ -8,6 +8,7 @@
   display: flex;
   padding: 2rem 0;
   justify-content: center;
+  // justify-content: space-between;
   font-family: $font-grotesk;
 
   @include mobile {
@@ -108,6 +109,7 @@
 
     @include mobile {
       align-self: flex-start;
+      justify-self: flex-end;
     }
 
     button {
@@ -125,6 +127,11 @@
       color: #fdeee7;
       width: 500px;
       height: 500px;
+
+      @include xs-mobile {
+        width: 80vw;
+        height: 80vw;
+      }
 
       .initial {
         justify-content: center;

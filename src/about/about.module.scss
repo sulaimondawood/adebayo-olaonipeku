@@ -48,6 +48,10 @@
         @include mobile {
           font-size: 90px;
         }
+
+        @include xs-mobile {
+          font-size: 12vw;
+        }
       }
     }
 

@@ -11,3 +11,8 @@
     @content;
   }
 }
+@mixin xs-mobile {
+  @media (min-width: 300px) and (max-width: 684px) {
+    @content;
+  }
+}
