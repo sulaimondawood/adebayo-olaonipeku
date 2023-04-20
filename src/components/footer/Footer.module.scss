@@ -85,6 +85,13 @@
         display: flex;
         gap: 2rem;
 
+        @media (max-width: 380px) {
+          gap: 1.5rem;
+        }
+        @media (max-width: 299px) {
+          gap: 0.8rem;
+        }
+
         li {
           list-style-type: none;
           color: $white;
@@ -129,10 +136,15 @@
       font-size: 14rem;
       z-index: 1;
       color: #fdeee7;
-      width: 500px;
-      height: 500px;
+      width: 30vw;
+      height: 30vw;
 
       @include xs-mobile {
+        width: 80vw;
+        height: 80vw;
+      }
+
+      @media (max-width: 299px) {
         width: 80vw;
         height: 80vw;
       }

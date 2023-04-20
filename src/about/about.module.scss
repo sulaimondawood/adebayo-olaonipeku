@@ -43,6 +43,7 @@
     &_text {
       > span {
         font-size: 180px;
+        // font-size: 20vh;
         line-height: 0.85;
 
         @include mobile {
@@ -50,6 +51,9 @@
         }
 
         @include xs-mobile {
+          font-size: 12vw;
+        }
+        @media (max-width: 299px) {
           font-size: 12vw;
         }
       }
@@ -75,6 +79,9 @@
       max-width: 40rem;
       margin-left: 33%;
 
+      @include mobile {
+        margin-left: 0;
+      }
       span:nth-child(1) {
         padding-right: 10%;
       }
