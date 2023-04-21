@@ -57,7 +57,7 @@ const Navigation = () => {
             }}
             className={styles.btn}
           >
-            MENU
+            CLOSE
           </button>
         </div>
         <div className={styles.nav_links}>
@@ -77,15 +77,23 @@ const Navigation = () => {
           </Link>
 
           <div className={styles.external_Links}>
-            <a className={styles.btn_link} href="">
-              GIthub
-            </a>
-            <a className={styles.btn_link} href="">
-              LinkedIn
-            </a>
-            <a className={styles.btn_link} href="">
-              Twitter
-            </a>
+            <div>
+              <p>
+                <a className={styles.btn_link} href="">
+                  GIthub
+                </a>
+              </p>
+            </div>
+            <div>
+              <a className={styles.btn_link} href="">
+                LinkedIn
+              </a>
+            </div>
+            <div>
+              <a className={styles.btn_link} href="">
+                Twitter
+              </a>
+            </div>
           </div>
         </div>
       </div>

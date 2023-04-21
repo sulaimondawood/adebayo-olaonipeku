@@ -61,7 +61,3 @@ a {
   color: inherit;
   scroll-behavior: smooth;
 }
-
-::-webkit-scrollbar {
-  display: none;
-}

@@ -47,6 +47,13 @@
         // font-size: 20vh;
         line-height: 0.85;
 
+        @media (min-width: 769px) and (max-width: 1350px) {
+          font-size: 90px;
+        }
+        @media (min-width: 1200px) and (max-width: 1350px) {
+          font-size: 150px;
+        }
+
         @include mobile {
           font-size: 90px;
         }

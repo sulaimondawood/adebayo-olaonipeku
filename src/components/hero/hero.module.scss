@@ -9,6 +9,7 @@
   height: 50vh;
   align-items: flex-end;
   font-family: $font-grotesk;
+  padding: 0 2rem;
 
   @include mobile {
     padding: 0 1rem;
