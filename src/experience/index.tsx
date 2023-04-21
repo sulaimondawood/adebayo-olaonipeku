@@ -8,6 +8,10 @@ const Experience = () => {
         <span>-</span>
         <span>Experience</span>
         <span>-</span>
+        <span>Experience</span>
+        <span>-</span>
+        <span>Experience</span>
+        <span>-</span>
       </div>
       <article className={styles.row}>
         <div className={styles.row_left}>

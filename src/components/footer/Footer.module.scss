@@ -3,17 +3,17 @@
 
 .footer_wrapper {
   max-width: 1440px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
-  padding: 2rem 0;
+  padding: 2rem;
   justify-content: center;
-  // justify-content: space-between;
   font-family: $font-grotesk;
 
   @include mobile {
     flex-direction: column;
     gap: 2rem;
+    padding: 0 1rem;
   }
 
   &_right {
@@ -21,6 +21,10 @@
     flex: 1.2;
     flex-direction: column;
     gap: 3rem;
+
+    @include mobile {
+      flex: 1;
+    }
 
     &_desc {
       color: $white;
@@ -136,8 +140,13 @@
       font-size: 14rem;
       z-index: 1;
       color: #fdeee7;
-      width: 30vw;
-      height: 30vw;
+      width: 40vw;
+      height: 40vw;
+
+      @media (min-width: 680px) and (max-width: 768px) {
+        width: 80vw;
+        height: 80vw;
+      }
 
       @include xs-mobile {
         width: 80vw;
