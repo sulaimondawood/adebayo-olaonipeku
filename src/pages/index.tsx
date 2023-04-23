@@ -5,6 +5,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import About from "@/about";
 import Projects from "@/components/projects";
+import Preloader from "@/components/preloader";
 export default function Home() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.index_bg}>
+        <Preloader />
         <Navigation />
         <Hero />
         <About />
