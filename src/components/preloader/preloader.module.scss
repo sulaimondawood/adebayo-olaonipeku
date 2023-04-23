@@ -28,6 +28,7 @@
 
     @include mobile {
       font-size: 6rem;
+      padding-bottom: calc(1rem + 1rem);
     }
   }
 

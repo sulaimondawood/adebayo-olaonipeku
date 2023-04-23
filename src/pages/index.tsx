@@ -3,7 +3,7 @@ import styles from "../styles/default.module.scss";
 import Hero from "@/components/hero";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import About from "@/about";
+import About from "@/components/about";
 import Projects from "@/components/projects";
 import Preloader from "@/components/preloader";
 export default function Home() {

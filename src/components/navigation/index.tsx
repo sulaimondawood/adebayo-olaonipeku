@@ -7,6 +7,14 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   //   referrrences
   const mobileNav = useRef(null);
+  const socialRefs = useRef(null);
+  const menu1Ref = useRef(null);
+  const menu2Ref = useRef(null);
+  const menu3Ref = useRef(null);
+  const closeRef = useRef(null);
+  const dawoodRef = useRef(null);
+
+  const socialLinksTL = gsap.timeline({ paused: true });
 
   //   handle functions
   const handleNavigation = (): void => {
@@ -15,14 +23,62 @@ const Navigation = () => {
     console.log(body);
 
     if (isOpen) {
+      socialLinksTL.reverse();
       body.style.overflow = "auto";
     } else {
+      socialLinksTL.play();
       body.style.overflow = "hidden";
     }
   };
 
   //gsap
 
+  useEffect(() => {
+    gsap.set([menu1Ref.current, menu2Ref.current, menu3Ref.current], {
+      skew: -35,
+      opacity: 0,
+      scale: 0,
+    });
+    gsap.set(dawoodRef.current, {
+      yPercent: 120,
+      skewY: 4,
+    });
+    gsap.set([socialRefs.current, closeRef.current], {
+      opacity: 0,
+      yPercent: 100,
+    });
+    gsap.set(mobileNav.current, {
+      // duration: 1.2,
+      // ease: "Power4.out",
+      yPercent: -100,
+    });
+
+    socialLinksTL
+      .to(mobileNav.current, {
+        yPercent: 0,
+        duration: 1.2,
+        ease: "Power4.out",
+      })
+      .to([socialRefs.current, closeRef.current], {
+        yPercent: 0,
+        opacity: 1,
+      })
+      .to([menu1Ref.current, menu2Ref.current, menu3Ref.current], {
+        scale: 1,
+        opacity: 1,
+        skew: 0,
+        stagger: {
+          amount: 1,
+          from: "random",
+        },
+      });
+    // .to(dawoodRef.current, {
+    //   duration: 0.5,
+    //   yPercent: 0,
+    //   skewY: 0,
+    //   ease: "Power4.out",
+    // });
+  }, []);
   return (
     <>
       <div className={styles.nav}>
@@ -39,19 +95,23 @@ const Navigation = () => {
         </button>
       </div>
 
-      <div
+      <div ref={mobileNav} className={styles.mobile_nav_container}>
+        {/* <div
         ref={mobileNav}
         className={
           isOpen
             ? `${styles.mobile_nav_container} ${styles.mobile_nav_container_active}`
             : styles.mobile_nav_container
         }
-      >
+      > */}
         <div className={styles.links_desc}>
-          <Link className={styles.link} href="/">
-            Dawood Sulaimon
-          </Link>
+          <div className={styles.div_name}>
+            <Link ref={dawoodRef} className={styles.link} href="/">
+              Dawood Sulaimon
+            </Link>
+          </div>
           <button
+            ref={closeRef}
             onClick={() => {
               handleNavigation();
             }}
@@ -61,13 +121,13 @@ const Navigation = () => {
           </button>
         </div>
         <div className={styles.nav_links}>
-          <Link href="projects" className={styles.nav_link}>
+          <Link ref={menu1Ref} href="projects" className={styles.nav_link}>
             projects
           </Link>
-          <Link href="about" className={styles.nav_link}>
+          <Link ref={menu2Ref} href="about" className={styles.nav_link}>
             about
           </Link>
-          <Link href="contact" className={styles.nav_link}>
+          <Link ref={menu3Ref} href="contact" className={styles.nav_link}>
             contact
           </Link>
         </div>
@@ -76,13 +136,11 @@ const Navigation = () => {
             Frontend Engineer
           </Link>
 
-          <div className={styles.external_Links}>
+          <div ref={socialRefs} className={styles.external_Links}>
             <div>
-              <p>
-                <a className={styles.btn_link} href="">
-                  GIthub
-                </a>
-              </p>
+              <a className={styles.btn_link} href="">
+                GIthub
+              </a>
             </div>
             <div>
               <a className={styles.btn_link} href="">
