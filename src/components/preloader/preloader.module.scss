@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -18,7 +18,7 @@
   opacity: 1;
 
   @include mobile {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .counts {
@@ -30,13 +30,21 @@
       font-size: 6rem;
     }
   }
-  .name {
-    font-size: 4rem;
-    font-weight: 500;
-    text-transform: uppercase;
 
-    @include mobile {
-      font-size: 1.8rem;
+  .wrp_wrp {
+    height: 100px;
+    overflow: hidden;
+    left: 2rem;
+    z-index: 9999;
+
+    .name {
+      font-size: 4rem;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      @include mobile {
+        font-size: 1.8rem;
+      }
     }
   }
 }

@@ -20,10 +20,13 @@ const Preloader = () => {
         },
       })
       .to(nameRef.current, {
-        duration: 5,
+        duration: 0.5,
+        yPercent: 0,
+        skewY: 0,
         ease: "Power4.out",
       })
       .to(nameRef.current, {
+        delay: 1.1,
         duration: 0.5,
         opacity: 0,
       })
@@ -43,19 +46,25 @@ const Preloader = () => {
     return gsap.to(countRef.current, {
       innerText: 100,
       snap: "innerText",
-      duration: 5,
+      duration: 2,
     });
   }
 
   useEffect(() => {
+    gsap.set(nameRef.current, {
+      yPercent: 120,
+      skewY: 4,
+    });
     tl.add(countDown(loader()).totalDuration());
   }, []);
 
   return (
     <div ref={preRef} className={styles.preloader_wrapper}>
-      <p ref={nameRef} className={styles.name}>
-        DAWOOD SULAIMON
-      </p>
+      <div className={styles.wrp_wrp}>
+        <p ref={nameRef} className={styles.name}>
+          DAWOOD SULAIMON
+        </p>
+      </div>
       <p ref={countRRef} className={styles.counts}>
         <span ref={countRef}>1</span>
         <span>%</span>
