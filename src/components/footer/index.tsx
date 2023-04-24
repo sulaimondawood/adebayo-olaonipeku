@@ -4,7 +4,7 @@ import styles from "./Footer.module.scss";
 import { AiOutlineArrowUp } from "react-icons/ai";
 const Footer = () => {
   return (
-    <section className={styles.footer_wrapper}>
+    <section id="contact" className={styles.footer_wrapper}>
       <div className={styles.footer_wrapper_right}>
         <h4 className={styles.footer_wrapper_right_desc}>
           Not much to see here except a super handy arrow to take you back to

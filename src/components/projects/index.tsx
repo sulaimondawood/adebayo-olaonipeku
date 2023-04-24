@@ -3,15 +3,8 @@ import styles from "./projects.module.scss";
 import { FiArrowUpRight } from "react-icons/fi";
 const Projects = () => {
   return (
-    <section className={styles.section_wrp}>
-      <div
-        className={styles.prj_prj_title}
-        data-scroll
-        data-scroll-speed="8"
-        data-scroll-repeat={true}
-        data-scroll-position="middle"
-        data-scroll-direction="horizontal"
-      >
+    <section id="projects" className={styles.section_wrp}>
+      <div className={styles.prj_prj_title}>
         <span>projects</span>
         <span>-</span>
         <span>projects</span>

@@ -3,7 +3,7 @@ import styles from "./about.module.scss";
 import Experience from "@/experience";
 const About = () => {
   return (
-    <section className={styles.section_wrp}>
+    <section id="about" className={styles.section_wrp}>
       <div className={styles.abt_abt_title}>
         <span>About</span>
         <span>-</span>

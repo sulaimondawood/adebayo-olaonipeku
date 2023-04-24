@@ -6,7 +6,9 @@ import Footer from "@/components/footer";
 import About from "@/components/about";
 import Projects from "@/components/projects";
 import Preloader from "@/components/preloader";
+import { gsap } from "gsap";
 export default function Home() {
+  const tl = gsap.timeline();
   return (
     <>
       <title>Create Next App</title>

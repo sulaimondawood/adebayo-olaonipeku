@@ -78,11 +78,16 @@
       color: $white;
     }
 
-    .link {
-      text-decoration: none;
-      font-size: 20px;
-      text-transform: uppercase;
-      color: $white;
+    .div_name {
+      overflow: hidden;
+
+      .link {
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $white;
+        display: inline-block;
+      }
     }
   }
 

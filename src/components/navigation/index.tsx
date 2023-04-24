@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./navigation.module.scss";
 import Link from "next/link";
 import { gsap } from "gsap";
 const Navigation = () => {
   // states
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   //   referrrences
   const mobileNav = useRef(null);
   const socialRefs = useRef(null);
@@ -17,19 +17,18 @@ const Navigation = () => {
   const socialLinksTL = gsap.timeline({ paused: true });
 
   //   handle functions
-  const handleNavigation = (): void => {
-    setIsOpen(!isOpen);
+  const handleNavigation = useCallback((): void => {
+    setIsOpen((open) => !open);
     const body: any = document.querySelector("body");
-    console.log(body);
 
     if (isOpen) {
+      body.style.overflow = "hidden";
+      socialLinksTL.play();
+    } else {
       socialLinksTL.reverse();
       body.style.overflow = "auto";
-    } else {
-      socialLinksTL.play();
-      body.style.overflow = "hidden";
     }
-  };
+  }, [isOpen]);
 
   //gsap
 
@@ -40,7 +39,7 @@ const Navigation = () => {
       scale: 0,
     });
     gsap.set(dawoodRef.current, {
-      yPercent: 120,
+      yPercent: 100,
       skewY: 4,
     });
     gsap.set([socialRefs.current, closeRef.current], {
@@ -71,13 +70,13 @@ const Navigation = () => {
           amount: 1,
           from: "random",
         },
+      })
+      .to(dawoodRef.current, {
+        duration: 0.5,
+        yPercent: 0,
+        skewY: 0,
+        ease: "Power4.out",
       });
-    // .to(dawoodRef.current, {
-    //   duration: 0.5,
-    //   yPercent: 0,
-    //   skewY: 0,
-    //   ease: "Power4.out",
-    // });
   }, []);
   return (
     <>
@@ -85,12 +84,7 @@ const Navigation = () => {
         <Link className={styles.link} href="/">
           Dawood Sulaimon
         </Link>
-        <button
-          onClick={() => {
-            handleNavigation();
-          }}
-          className={styles.btn}
-        >
+        <button onClick={handleNavigation} className={styles.btn}>
           MENU
         </button>
       </div>
@@ -112,24 +106,37 @@ const Navigation = () => {
           </div>
           <button
             ref={closeRef}
-            onClick={() => {
-              handleNavigation();
-            }}
+            onClick={handleNavigation}
             className={styles.btn}
           >
             CLOSE
           </button>
         </div>
         <div className={styles.nav_links}>
-          <Link ref={menu1Ref} href="projects" className={styles.nav_link}>
+          <a
+            ref={menu1Ref}
+            href="#projects"
+            className={styles.nav_link}
+            onClick={handleNavigation}
+          >
             projects
-          </Link>
-          <Link ref={menu2Ref} href="about" className={styles.nav_link}>
+          </a>
+          <a
+            ref={menu2Ref}
+            href="#about"
+            className={styles.nav_link}
+            onClick={handleNavigation}
+          >
             about
-          </Link>
-          <Link ref={menu3Ref} href="contact" className={styles.nav_link}>
+          </a>
+          <a
+            ref={menu3Ref}
+            href="#contact"
+            className={styles.nav_link}
+            onClick={handleNavigation}
+          >
             contact
-          </Link>
+          </a>
         </div>
         <div className={styles.links_desc2}>
           <Link className={styles.link} href="/">
