@@ -119,6 +119,7 @@
         font-size: calc(1.75rem + 0.25vw);
         line-height: 1.5;
         font-weight: 300;
+        // color: gray;
 
         @include mobile {
           font-size: calc(1.5rem + 0.15vw);

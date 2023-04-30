@@ -3,7 +3,7 @@ import styles from "./preloader.module.scss";
 
 import { gsap } from "gsap";
 
-const Preloader = () => {
+const Preloader = ({ timeline }: any) => {
   const preRef = useRef(null);
   const countRef = useRef(null);
   const nameRef = useRef(null);
@@ -41,7 +41,7 @@ const Preloader = () => {
       });
   }
 
-  const tl = gsap.timeline();
+  // const tl = gsap.timeline();
   function countDown(number: number): any {
     return gsap.to(countRef.current, {
       innerText: 100,
@@ -55,7 +55,8 @@ const Preloader = () => {
       yPercent: 120,
       skewY: 4,
     });
-    tl.add(countDown(loader()).totalDuration());
+    timeline.add(countDown(loader()).totalDuration());
+    // tl.add(countDown(loader()).totalDuration());
   }, []);
 
   return (

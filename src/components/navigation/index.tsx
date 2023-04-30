@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 const Navigation = () => {
   // states
   const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isROpen, setRIsOpen] = useState<boolean>(true);
   //   referrrences
   const mobileNav = useRef(null);
   const socialRefs = useRef(null);
@@ -13,9 +14,10 @@ const Navigation = () => {
   const menu3Ref = useRef(null);
   const closeRef = useRef(null);
   const dawoodRef = useRef(null);
+  const roleRef = useRef(null);
 
-  const socialLinksTL = gsap.timeline({ paused: true });
-
+  let socialLinksTL: any;
+  let socialLinksTLR: any;
   //   handle functions
   const handleNavigation = useCallback((): void => {
     setIsOpen((open) => !open);
@@ -24,22 +26,26 @@ const Navigation = () => {
     if (isOpen) {
       body.style.overflow = "hidden";
       socialLinksTL.play();
+      setRIsOpen(!isROpen);
     } else {
-      socialLinksTL.reverse();
+      // socialLinksTL.reverse();
+      socialLinksTLR.play();
       body.style.overflow = "auto";
     }
   }, [isOpen]);
 
   //gsap
-
   useEffect(() => {
-    gsap.set([menu1Ref.current, menu2Ref.current, menu3Ref.current], {
-      skew: -35,
-      opacity: 0,
-      scale: 0,
-    });
+    gsap.set(
+      [menu1Ref.current, menu2Ref.current, menu3Ref.current, roleRef.current],
+      {
+        skew: -35,
+        opacity: 0,
+        scale: 0,
+      }
+    );
     gsap.set(dawoodRef.current, {
-      yPercent: 100,
+      yPercent: 120,
       skewY: 4,
     });
     gsap.set([socialRefs.current, closeRef.current], {
@@ -47,10 +53,32 @@ const Navigation = () => {
       yPercent: 100,
     });
     gsap.set(mobileNav.current, {
-      // duration: 1.2,
-      // ease: "Power4.out",
+      duration: 1.2,
+      ease: "Power4.out",
       yPercent: -100,
     });
+  }, [isROpen]);
+  useEffect(() => {
+    socialLinksTL = gsap.timeline({ paused: true });
+
+    // gsap.set([menu1Ref.current, menu2Ref.current, menu3Ref.current], {
+    //   skew: -35,
+    //   opacity: 0,
+    //   scale: 0,
+    // });
+    // gsap.set(dawoodRef.current, {
+    //   yPercent: 120,
+    //   skewY: 4,
+    // });
+    // gsap.set([socialRefs.current, closeRef.current], {
+    //   opacity: 0,
+    //   yPercent: 100,
+    // });
+    // gsap.set(mobileNav.current, {
+    //   duration: 1.2,
+    //   ease: "Power4.out",
+    //   yPercent: -100,
+    // });
 
     socialLinksTL
       .to(mobileNav.current, {
@@ -62,22 +90,56 @@ const Navigation = () => {
         yPercent: 0,
         opacity: 1,
       })
-      .to([menu1Ref.current, menu2Ref.current, menu3Ref.current], {
-        scale: 1,
-        opacity: 1,
-        skew: 0,
-        stagger: {
-          amount: 1,
-          from: "random",
-        },
-      })
+      .to(
+        [menu1Ref.current, menu2Ref.current, menu3Ref.current, roleRef.current],
+        {
+          scale: 1,
+          opacity: 1,
+          skew: 0,
+          stagger: {
+            amount: 1,
+            from: "random",
+          },
+        }
+      )
       .to(dawoodRef.current, {
         duration: 0.5,
         yPercent: 0,
         skewY: 0,
         ease: "Power4.out",
       });
-  }, []);
+  }, [isOpen]);
+  useEffect(() => {
+    socialLinksTLR = gsap.timeline({ paused: true });
+    socialLinksTLR
+      .to([socialRefs.current, closeRef.current], {
+        yPercent: 100,
+        opacity: 0,
+      })
+      .to(dawoodRef.current, {
+        duration: 0.5,
+        yPercent: 120,
+        skewY: 4,
+        ease: "Power4.out",
+      })
+      .to(
+        [menu1Ref.current, menu2Ref.current, menu3Ref.current, roleRef.current],
+        {
+          skew: -35,
+          opacity: 0,
+          scale: 0,
+          stagger: {
+            amount: 1,
+            from: "random",
+          },
+        }
+      )
+      .to(mobileNav.current, {
+        yPercent: -100,
+        duration: 1.2,
+        ease: "Power4.out",
+      });
+  }, [isOpen]);
   return (
     <>
       <div className={styles.nav}>
@@ -139,7 +201,7 @@ const Navigation = () => {
           </a>
         </div>
         <div className={styles.links_desc2}>
-          <Link className={styles.link} href="/">
+          <Link ref={roleRef} className={styles.link} href="/">
             Frontend Engineer
           </Link>
 

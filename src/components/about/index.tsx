@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./about.module.scss";
 import Experience from "@/experience";
+import { gsap } from "gsap";
 const About = () => {
+  const textRevealRef = useRef(null);
+  useEffect(() => {}, []);
   return (
     <section id="about" className={styles.section_wrp}>
       <div className={styles.abt_abt_title}>
@@ -45,7 +48,7 @@ const About = () => {
 
         <article>
           <p className={styles.first_sent}>in terms of frontend development</p>
-          <p className={styles.actual_sent}>
+          <p ref={textRevealRef} className={styles.actual_sent}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
             aperiam ea, deleniti ut eaque excepturi ipsam nulla ipsum quo quos
             corrupti perspiciatis reprehenderit enim mollitia minima molestiae
