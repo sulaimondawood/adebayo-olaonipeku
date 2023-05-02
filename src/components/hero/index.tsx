@@ -42,8 +42,8 @@ const Hero = () => {
         </div>
         <div className={styles.hero_wrapper_desc}>
           <h1 ref={titleRef} className={styles.title}>
-            {/* Founder & Creative of Studio 28k */}I build Products that solve
-            problems
+            {/* Founder & Creative of Studio 28k */}I Craft innovative solutions
+            through software engineering
           </h1>
           <div>
             <p ref={descRef}>
