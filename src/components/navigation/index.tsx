@@ -32,7 +32,7 @@ const Navigation = () => {
       socialLinksTLR.play();
       body.style.overflow = "auto";
     }
-  }, [isOpen]);
+  }, [isOpen, socialLinksTL, socialLinksTLR, isROpen]);
 
   //gsap
   useEffect(() => {
@@ -139,12 +139,12 @@ const Navigation = () => {
         duration: 1.2,
         ease: "Power4.out",
       });
-  }, [isOpen]);
+  }, [isOpen, socialLinksTLR, socialLinksTLR]);
   return (
     <>
       <div className={styles.nav}>
         <Link className={styles.link} href="/">
-          Dawood Sulaimon
+          ADEBAYO O
         </Link>
         <button onClick={handleNavigation} className={styles.btn}>
           MENU
@@ -163,7 +163,7 @@ const Navigation = () => {
         <div className={styles.links_desc}>
           <div className={styles.div_name}>
             <Link ref={dawoodRef} className={styles.link} href="/">
-              Dawood Sulaimon
+              ADEBAYO O
             </Link>
           </div>
           <button
@@ -202,7 +202,7 @@ const Navigation = () => {
         </div>
         <div className={styles.links_desc2}>
           <Link ref={roleRef} className={styles.link} href="/">
-            Frontend Engineer
+            Software Engineer
           </Link>
 
           <div ref={socialRefs} className={styles.external_Links}>

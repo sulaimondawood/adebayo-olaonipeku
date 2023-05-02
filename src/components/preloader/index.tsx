@@ -57,13 +57,13 @@ const Preloader = ({ timeline }: any) => {
     });
     timeline.add(countDown(loader()).totalDuration());
     // tl.add(countDown(loader()).totalDuration());
-  }, []);
+  }, [timeline]);
 
   return (
     <div ref={preRef} className={styles.preloader_wrapper}>
       <div className={styles.wrp_wrp}>
         <p ref={nameRef} className={styles.name}>
-          DAWOOD SULAIMON
+          ADEBAYO O
         </p>
       </div>
       <p ref={countRRef} className={styles.counts}>

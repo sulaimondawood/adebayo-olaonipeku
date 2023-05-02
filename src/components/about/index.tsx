@@ -29,10 +29,10 @@ const About = () => {
           <span>Engineer </span>
         </div>
         <div className={styles.row_text}>
-          <span>Frontend </span>
+          <span>Developer </span>
         </div>
         <div className={styles.row_text}>
-          <span>Developer </span>
+          <span>Operations </span>
         </div>
       </div>
 
@@ -47,20 +47,40 @@ const About = () => {
         </div>
 
         <article>
-          <p className={styles.first_sent}>in terms of frontend development</p>
+          <p className={styles.first_sent}>in terms of Software development</p>
           <p ref={textRevealRef} className={styles.actual_sent}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-            aperiam ea, deleniti ut eaque excepturi ipsam nulla ipsum quo quos
-            corrupti perspiciatis reprehenderit enim mollitia minima molestiae
-            numquam dolore! Corrupti, culpa ex, minus quidem vel assumenda
-            aperiam libero illo ab numquam cumque ipsa nesciunt necessitatibus
-            nobis voluptates eum, minima inventore. Nisi beatae voluptas et
-            aliquam, nostrum autem maiores adipisci optio, quaerat nihil quam
-            explicabo cumque in nesciunt ut ex amet qui necessitatibus
-            distinctio debitis itaque corporis assumenda molestias commodi?
-            Quibusdam in cumque vero, provident ex vitae quas velit soluta.
-            Accusantium rerum fugiat suscipit, molestiae ad iure hic possimus
-            provident! Quod.
+            <br />
+            I am proficient in HTML, CSS, JavaScript, and various frontend
+            frameworks like React, Vue, and Angular. I have developed multiple
+            responsive and user-friendly web applications with an excellent user
+            interface and experience.
+            <br />
+            <br /> When it comes to backend development, I have worked with
+            various programming languages, including Python, Java, and Node.js.
+            I have experience in developing RESTful APIs, handling database
+            management systems like MySQL, PostgreSQL, and MongoDB, and working
+            with backend frameworks like Flask and Django.
+            <br />
+            <br /> In terms of artificial intelligence and data science, I have
+            knowledge of various data analysis techniques, data visualization
+            tools, and machine learning algorithms. I have experience in using
+            libraries like NumPy, Pandas, Scikit-learn, and TensorFlow to build
+            predictive models, analyze data, and generate insights.
+            <br />
+            <br /> As a data engineer, I have expertise in designing,
+            developing, and maintaining data pipelines and data warehouses. I
+            have experience in working with various ETL tools like Apache NiFi
+            and Talend, and cloud platforms like AWS, GCP, and Azure.
+            <br />
+            <br /> Finally, as a machine learning engineer, I have worked on
+            building end-to-end machine learning systems, starting from data
+            preprocessing to deploying the model into production. I have
+            experience in developing and deploying models using frameworks like
+            TensorFlow, PyTorch, and Keras.
+            <br />
+            <br /> Overall, my diverse skillset allows me to be a valuable asset
+            to any team, and I am passionate about keeping up with the latest
+            technologies and trends in the industry
           </p>
         </article>
       </div>

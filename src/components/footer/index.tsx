@@ -14,7 +14,7 @@ const Footer = () => {
         <article className={styles.contact}>
           <h5 className={styles.title}>contact me</h5>
           <button>
-            <a href="mailto:josholajide@gmail.com">josholajide@gmail.com</a>
+            <a href="mailto:adebayo@gmail.com">adebayoolanonipekun@gmail.com</a>
           </button>
         </article>
 

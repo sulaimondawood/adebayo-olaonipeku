@@ -38,17 +38,17 @@ const Hero = () => {
       <div className={styles.hero_wrapper}>
         <div ref={contactRef} className={styles.contact}>
           <p>contact me</p>
-          <a href="'mailto:sulaimondawod@gmail.com">hohn@gmail.com</a>
+          <a href="'mailto:adebayod@gmail.com">adebayoolaonipekun@gmail.com</a>
         </div>
         <div className={styles.hero_wrapper_desc}>
           <h1 ref={titleRef} className={styles.title}>
-            Founder & Creative of Studio 28k
+            {/* Founder & Creative of Studio 28k */}I build Products that solve
+            problems
           </h1>
           <div>
             <p ref={descRef}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              cumque corporis similique quia suscipit nesciunt iusto porro
-              veritatis doloremque asperiores!
+              I am a software engineer based in Lagos, Nigeria. I have over 10
+              years experience in building products that solve problems.
             </p>
           </div>
         </div>
